@@ -1,4 +1,4 @@
-# 🌍 Adaptive WGAST: A Weakly-Supervised Generative Framework for High-Resolution Land Surface Temperature Reconstruction
+#  Adaptive WGAST: A Weakly-Supervised Generative Framework for High-Resolution Land Surface Temperature Reconstruction
 
 <p align="center">
   <img src="https://img.shields.io/badge/DeepLearning-PyTorch-blue?style=flat-square">
@@ -23,9 +23,9 @@ Department of Computer Science and Engineering,
 **Adaptive WGAST** is an enhanced deep generative framework for reconstructing **high-resolution Land Surface Temperature (LST)** from coarse satellite observations under **weak supervision**.
 
 It builds upon the original **Weighted Generative Adversarial Spatio-Temporal (WGAST)** model by introducing:
-1. 🧠 **Adaptive Denoising Block (ADB)** – A learnable spatially-aware filter that corrects thermal noise adaptively without over-smoothing heterogeneous regions.  
-2. 🔄 **Similarity Feature Refinement (SFR)** – A cross-sensor alignment mechanism leveraging cosine similarity to enhance coherence between **Landsat** and **Sentinel** representations.  
-3. 📉 **Weakly-Supervised Training** – Enables accurate fine-resolution predictions even with sparse or coarse MODIS labels.
+1. **Adaptive Denoising Block (ADB)** – A learnable spatially-aware filter that corrects thermal noise adaptively without over-smoothing heterogeneous regions.  
+2. **Similarity Feature Refinement (SFR)** – A cross-sensor alignment mechanism leveraging cosine similarity to enhance coherence between **Landsat** and **Sentinel** representations.  
+3. **Weakly-Supervised Training** – Enables accurate fine-resolution predictions even with sparse or coarse MODIS labels.
 
 These innovations yield higher reconstruction fidelity while preserving local spatial variability.
 
@@ -46,18 +46,18 @@ However, satellite sensors suffer from spatial-temporal trade-offs:
 
 ---
 
-## ⚙️ Model Architecture
+## Model Architecture
 
 Adaptive WGAST extends WGAST’s generator-decoder backbone with two learnable modules:
 
-### 🔸 Adaptive Denoising Block (ADB)
+### Adaptive Denoising Block (ADB)
 Learns both a residual map \(R(x)\) and a gating mask \(M(x)\):
 \[
 Y_{\text{final}} = \hat{Y} + M(x) \odot R(x)
 \]
 This enables pixel-wise control over denoising intensity.
 
-### 🔸 Similarity Feature Refinement (SFR)
+### Similarity Feature Refinement (SFR)
 Computes cross-sensor cosine similarity between latent features:
 \[
 S = \frac{F_L \cdot F_S}{\sqrt{(F_L^2)} \sqrt{(F_S^2)}}
@@ -70,17 +70,17 @@ Used to align Landsat and Sentinel features before decoding.
 
 ---
 
-## 🧠 Key Features
+##  Key Features
 
-- ✅ Weakly-supervised training with coarse MODIS guidance  
-- 🧩 Learnable denoising for texture preservation  
-- 🌐 Cross-sensor alignment between Landsat and Sentinel features  
-- 📈 Quantitative evaluation: MAE, RMSE, R², and Pearson correlation  
-- 🛰️ Compatible with multi-mission data (Landsat 8/9, MODIS, Sentinel-2)
+-  Weakly-supervised training with coarse MODIS guidance  
+-  Learnable denoising for texture preservation  
+-  Cross-sensor alignment between Landsat and Sentinel features  
+-  Quantitative evaluation: MAE, RMSE, R², and Pearson correlation  
+-  Compatible with multi-mission data (Landsat 8/9, MODIS, Sentinel-2)
 
 ---
 
-## 🧪 Dataset and Region of Interest
+##  Dataset and Region of Interest
 
 **Region:** UTM Zone 31N (EPSG:32631)  
 **Bounding Box:** `[412850.0, 5299550.0, 424850.0, 5311550.0]`
@@ -95,7 +95,7 @@ Cloud masking applied using `QA_PIXEL`.
 
 ---
 
-## 🧩 Repository Structure
+##  Repository Structure
 WGAST/  
 ├── data_download/        # Scripts to download MODIS, Landsat, Sentinel data  
 ├── data_loader/          # Dataset loading and utilities  
@@ -108,7 +108,7 @@ WGAST/
 
 ---
 
-## 💻 Usage Workflow
+##  Usage Workflow
 
 1. **Download datasets** → MODIS, Landsat 8/9, and Sentinel-2  
 2. **Preprocess data** using triplet generation scripts  
@@ -118,7 +118,7 @@ WGAST/
 
 ---
 
-## 🌏 Applications
+##  Applications
 
 - 🌆 **Urban heat island** and microclimate monitoring  
 - 🌾 **Agricultural drought** and evapotranspiration mapping  
@@ -126,7 +126,7 @@ WGAST/
 - 🚨 **Disaster risk** and heatwave detection  
 
 ---
-## 🙏 Acknowledgments
+##  Acknowledgments
 We thank **Google Earth Engine (GEE)**, **NASA**, **USGS**, and **Kaggle** for providing open-access satellite data and GPU resources.
 
 ---
