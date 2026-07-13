@@ -66,14 +66,6 @@ Used to align Landsat and Sentinel features before decoding.
 
 ---
 
-## 📊 Results Summary
-
-| Model | MAE (°C) | RMSE (°C) | R² | Corr |
-|:------|:---------:|:----------:|:----:|:------:|
-| **Original WGAST** | 2.260 | 2.928 | -0.424 | 0.713 |
-| **Adaptive WGAST v1** | 2.011 | 2.621 | -0.212 | 0.709 |
-| **Adaptive WGAST v2** | **1.849** | **2.454** | **-0.000** | **0.703** |
-
 ✅ **16% RMSE reduction** and **18% MAE improvement** over the baseline WGAST.
 
 ---
