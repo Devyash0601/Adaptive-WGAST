@@ -15,7 +15,7 @@ Department of Computer Science and Engineering,
 
 ---
 
-[Read the Research Paper (PDF)](./Adaptive_WGAST.pdf)
+[📄 Read the Research Paper (PDF)](https://drive.google.com/file/d/1aehn8YGrgtYvRgdB662WNzTo923BV9_8/view?usp=sharing)
 
 
 ## 📘 Overview
